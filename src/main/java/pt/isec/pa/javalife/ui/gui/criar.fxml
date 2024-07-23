@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.isec.pa.javalife.ui.CriarController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="123.0" layoutX="186.0" layoutY="22.0" stroke="#cccccc" strokeType="OUTSIDE" width="214.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="218.0" layoutX="67.0" layoutY="160.0" stroke="#cccccc" strokeType="OUTSIDE" width="218.0" />
+      <TextField fx:id="comprimento" layoutX="218.0" layoutY="60.0" promptText="Comprimento" />
+      <TextField fx:id="largura" layoutX="218.0" layoutY="96.0" promptText="Largura" />
+      <TextField fx:id="forcaInicialFlora" layoutX="101.0" layoutY="199.0" promptText="Força Inicial" />
+      <TextField fx:id="forcaCriaFlora" layoutX="101.0" layoutY="234.0" promptText="Força Cria" />
+      <TextField fx:id="forcaPerdidaFlora" layoutX="76.0" layoutY="269.0" prefHeight="26.0" prefWidth="199.0" promptText="Força perdida quando Sobreposto" />
+      <Label layoutX="217.0" layoutY="34.0" text="Definições Ecossistema">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="123.0" layoutY="173.0" text="Definições Flora">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="corFlora" layoutX="113.0" layoutY="334.0">
+         <value>
+            <Color red="0.011228070594370365" green="0.75789475440979" blue="0.29745030403137207" />
+         </value></ColorPicker>
+      <Label layoutX="120.0" layoutY="307.0" text="Côr Representativa:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="218.0" layoutX="297.0" layoutY="160.0" stroke="#cccccc" strokeType="OUTSIDE" width="218.0" />
+      <TextField fx:id="forcaInicialFauna" layoutX="331.0" layoutY="199.0" promptText="Força Inicial" />
+      <TextField fx:id="forcaMovimentoFauna" layoutX="331.0" layoutY="234.0" promptText="Força por Movimento" />
+      <Label layoutX="350.0" layoutY="173.0" text="Definições Fauna">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="img1Selected" arcHeight="5.0" arcWidth="5.0" fill="#00ac53" height="58.0" layoutX="309.0" layoutY="310.0" stroke="#038e07" strokeType="OUTSIDE" strokeWidth="2.0" visible="false" width="58.0" />
+      <Rectangle fx:id="img2Selected" arcHeight="5.0" arcWidth="5.0" fill="#00ac53" height="58.0" layoutX="377.0" layoutY="310.0" stroke="#038e07" strokeType="OUTSIDE" strokeWidth="2.0" visible="false" width="58.0" />
+      <Rectangle fx:id="img3Selected" arcHeight="5.0" arcWidth="5.0" fill="#00ac53" height="58.0" layoutX="445.0" layoutY="310.0" stroke="#038e07" strokeType="OUTSIDE" strokeWidth="2.0" visible="false" width="58.0" />
+      <ImageView fx:id="img1Fauna" fitHeight="69.0" fitWidth="58.0" layoutX="309.0" layoutY="310.0" onMouseClicked="#img1Clicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@res/fauna_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img2Fauna" fitHeight="58.0" fitWidth="58.0" layoutX="377.0" layoutY="310.0" onMouseClicked="#img2Clicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@res/fauna_2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img3Fauna" fitHeight="58.0" fitWidth="58.0" layoutX="445.0" layoutY="310.0" onMouseClicked="#img3Clicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@res/fauna_3.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="336.0" layoutY="277.0" text="Imagem Representativa:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="ButtonRetornar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#retornar" text="Retornar" />
+      <Button fx:id="ButtonCriar" layoutX="532.0" layoutY="10.0" mnemonicParsing="false" onAction="#criar" prefHeight="26.0" prefWidth="58.0" text="Criar" />
+      <Text fx:id="errorText" fill="#b90303" layoutX="436.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Existem valores inválidos!" visible="false" />
+   </children>
+</AnchorPane>
